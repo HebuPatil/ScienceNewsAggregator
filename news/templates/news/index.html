@@ -1,0 +1,96 @@
+<!--
+    TO START THE PROGRAM RUN 'python manage.py runserver' in directory
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Science News Aggregator</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    
+        <center>
+            <h1>Science News Aggregator</h1>
+            <h2></h2>
+            <p>Find the news thats really worth your time from these consolidated science articles, organized by site<br>Articles are updated daily to make sure you are getting the most relevant information<p>
+            <a href="/" class="btn btn-danger">News not showing up?</a>
+        </center>
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                    <h3 class="text-centre">WIRED</h3>
+                    {% for wn in wired_news %}
+                    <h5><a title="WIRED Science" href="https://www.wired.com/category/science/" target="_blank"> -  {{wn}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre"><a>ScienceNews</a></h3>
+                    {% for sn in sci_news %}
+                    <h5><a title="Science News" href="https://www.sciencenews.org/" target="_blank"> - {{sn}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">New York Times</h3>
+                    {% for nn in nyt_news %}
+                    <h5><a title="New York Times" href="https://www.nytimes.com/section/science" target="_blank"> - {{nn}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">Science Magazine</h3>
+                    {% for smn in scimag_news %}
+                    <h5><a title="Science Magazine" href="https://www.sciencemag.org/" target="_blank"> - {{smn}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">Tech Crunch</h3>
+                    {% for un in us_news %}
+                    <h5><a title="Tech Crunch" href="https://techcrunch.com/" target="_blank"> - {{un}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">Mind Hack</h3>
+                    {% for m in mh_news %}
+                    <h5><a title="Mind Hacks" href="https://mindhacks.com/" target="_blank"> - {{m}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">Vox Science</h3>
+                    {% for d in dm_news %}
+                    <h5><a title="Vox Science" href="https://www.vox.com/science-and-health" target="_blank"> - {{d}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+            <div class="col-6">
+                    <h3 class="text-centre">NPR Science</h3>
+                    {% for re in reuters_news %}
+                    <h5><a title="NPR" href="https://www.npr.org/sections/science/" target="_blank"> - {{re}} </a></h5>
+                    <hr>
+                    {% endfor %}
+                    <br>
+            </div>
+        </div>
+ 
+ 
+</div>
+    <script
+src="http://code.jquery.com/jquery-3.3.1.min.js"
+integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
